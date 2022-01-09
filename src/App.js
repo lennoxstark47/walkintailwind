@@ -9,6 +9,7 @@ import Unsuccessfull from './components/Unsuccessfull';
 import CreateCx from './components/CreateCx';
 import Navbar from './components/Navbar';
 import CxList from './components/CxList';
+import EditCx from './components/EditCx';
 
 function App() {
 	return (
@@ -31,6 +32,10 @@ function App() {
 				<Route
 					path='/cxlist'
 					component={CxList}
+				/>
+				<Route
+					path='edit/:id'
+					component={EditCx}
 				/>
 			</div>
 		</Router>
