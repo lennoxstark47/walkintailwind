@@ -38,6 +38,7 @@ export default class EditCx extends Component {
 				<div className='container mx-auto w-5/6  rounded-lg max-w-md shadow-lg hover:shadow-lg transition duration-300'>
 					<div className='py-12  p-10  rounded-lg mt-5 h-full  bg-violet-200'>
 						<div className='mb-6'>
+							<h4>{this.state.name}</h4>
 							<label className='mr-4 text-gray-700 font-bold inline-block mb-2 '>
 								Name
 							</label>
@@ -51,6 +52,7 @@ export default class EditCx extends Component {
 								Phone
 							</label>
 							<input
+								value={this.state.phone}
 								type='text'
 								className='mr-4 bg-white w-full text-gray-500 py-2 px-4 lg:w-96 border-transparent focus:ring-2 focus:ring-indigo-400 rounded'
 								onChange={this.onPhoneChange}
@@ -59,6 +61,7 @@ export default class EditCx extends Component {
 								Address
 							</label>
 							<input
+								value={this.state.address}
 								type='text'
 								className='mr-4 bg-white w-full text-gray-500 py-2 px-4 lg:w-96 border-transparent focus:ring-2 focus:ring-indigo-400 rounded'
 								onChange={this.onAddressChange}
@@ -67,6 +70,7 @@ export default class EditCx extends Component {
 								PIN
 							</label>
 							<input
+								value={this.state.pin}
 								type='text'
 								className='mr-4 bg-white w-full text-gray-500 py-2 px-4 lg:w-96 border-transparent focus:ring-2 focus:ring-indigo-400 rounded'
 								onChange={this.onPinChange}

@@ -93,12 +93,12 @@ export default function Navbar() {
 										View All Customers
 									</a>
 									<a
-										href='#'
+										href='/converted'
 										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
 										Converted
 									</a>
 									<a
-										href='#'
+										href='/nonconverted'
 										className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
 										Non-Converted
 									</a>

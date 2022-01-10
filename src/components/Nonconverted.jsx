@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 
-export default class CxList extends Component {
-	constructor(props) {
-		super(props);
+export default class Nonconverted extends Component {
+	constructor() {
+		super();
 		this.state = {
 			loading: false,
 			customers: [],
@@ -12,17 +11,20 @@ export default class CxList extends Component {
 	}
 
 	componentDidMount() {
-		this.setState({ loading: true });
+		this.setState({
+			loading: true,
+		});
+
 		axios
 			.get(
-				'https://secure-dusk-73088.herokuapp.com/api/customer/list'
+				'https://secure-dusk-73088.herokuapp.com/api/customer/get/nonconverted'
 			)
 			.then((res) => {
-				console.log(res.data);
 				this.setState({
 					customers: res.data,
 					loading: false,
 				});
+				console.log(res.data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -88,11 +90,11 @@ export default class CxList extends Component {
 							</td>
 						)}
 						<td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
-							<Link
-								to={'/edit/' + customer._id}
+							<a
+								href='#'
 								className='text-indigo-600 hover:text-indigo-900'>
 								Edit
-							</Link>
+							</a>
 						</td>
 					</tr>
 				);

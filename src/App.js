@@ -10,7 +10,8 @@ import CreateCx from './components/CreateCx';
 import Navbar from './components/Navbar';
 import CxList from './components/CxList';
 import EditCx from './components/EditCx';
-
+import Converted from './components/Converted';
+import Nonconverted from './components/Nonconverted';
 function App() {
 	return (
 		<Router>
@@ -34,8 +35,16 @@ function App() {
 					component={CxList}
 				/>
 				<Route
-					path='edit/:id'
+					path='/edit/:id'
 					component={EditCx}
+				/>
+				<Route
+					path='/converted'
+					component={Converted}
+				/>
+				<Route
+					path='/nonconverted'
+					component={Nonconverted}
 				/>
 			</div>
 		</Router>
