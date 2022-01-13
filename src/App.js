@@ -12,16 +12,13 @@ import CxList from './components/CxList';
 import EditCx from './components/EditCx';
 import Converted from './components/Converted';
 import Nonconverted from './components/Nonconverted';
+import SearchByDate from './components/SearchByDate';
 function App() {
 	return (
 		<Router>
 			<div>
 				<Navbar />
-				<Route
-					path='/'
-					exact
-					component={CreateCx}
-				/>
+				<Route path='/' exact component={CreateCx} />
 				<Route
 					path='/success'
 					component={Successfull}
@@ -30,14 +27,8 @@ function App() {
 					path='fail'
 					component={Unsuccessfull}
 				/>
-				<Route
-					path='/cxlist'
-					component={CxList}
-				/>
-				<Route
-					path='/edit/:id'
-					component={EditCx}
-				/>
+				<Route path='/cxlist' component={CxList} />
+				<Route path='/edit/:id' component={EditCx} />
 				<Route
 					path='/converted'
 					component={Converted}
@@ -45,6 +36,10 @@ function App() {
 				<Route
 					path='/nonconverted'
 					component={Nonconverted}
+				/>
+				<Route
+					path='/searchbydate'
+					component={SearchByDate}
 				/>
 			</div>
 		</Router>
